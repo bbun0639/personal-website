@@ -10,6 +10,7 @@ import IconAndroid from "@/app/assets/icons/android-icon.png";
 import IconGithub from "@/app/assets/logos/github-logo.png";
 import IconGmail from "@/app/assets/logos/gmail-logo.png";
 import ToggleTheme from "../../components/ToggleTheme";
+import MySelfie from "@/app/assets/images/my-selfie-1.png";
 
 const PersonalInfos = () => {
   return (
@@ -31,7 +32,15 @@ const PersonalInfos = () => {
         </a>
         <ToggleTheme />
       </div>
+
+      <Image
+        src={MySelfie}
+        alt="react-icon"
+        className="max-h-[160px] max-w-[160px] min-h-[160px] min-w-[160px] md:max-h-[200px] md:max-w-[200px] md:min-h-[200px] md:min-w-[200px] object-cover rounded-full mb-4 transition-all"
+      />
+
       <h1 className="text-36 md:text-48 font-bold">Pathomphob Sunanta</h1>
+
       <div>
         <p className="text-20 md:text-24 transition-colors dark:text-green-500 text-orange-500 duration-1000">
           Frontend Developer
@@ -40,6 +49,7 @@ const PersonalInfos = () => {
           Passionate, learner, responsible, eager to learn new technologies.
         </p>
       </div>
+
       <div className="flex flex-col gap-4 my-6">
         <div className="flex gap-3 md:flex-row flex-col">
           <div className="flex gap-2">
@@ -85,6 +95,7 @@ const PersonalInfos = () => {
             Also mobile application with React Native and Css enthusiast.
           </p>
         </div>
+
         {/* <div className="flex">
           <div className="text-36 mr-3 text-gray-600">&quot;</div>
           <p>
