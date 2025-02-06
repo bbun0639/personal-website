@@ -92,7 +92,7 @@ const PersonalInfos = () => {
             />
           </div>
           <p className="text-16">
-            Also mobile application with React Native and Css enthusiast.
+            Also mobile application with React Native and Css lovers.
           </p>
         </div>
 

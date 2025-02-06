@@ -28,7 +28,7 @@ export const workExperience: IWorkExperience[] = [
       link: "https://20scoopscnx.com/",
       logo: twentyLogo,
     },
-    duration: "Mar 2022 - Present",
+    duration: "Mar 2022 - Dec 2025",
   },
   {
     position: "Junior Frontend Developer",

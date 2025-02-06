@@ -3,31 +3,27 @@ import Image from "next/image";
 import { workExperience } from "@/app/core/constant";
 
 const WorkExperience = () => {
-  const calYearsAndMonths = (
-    startYear: number,
-    startMonth: number
-  ): { years: number; months: number } => {
-    const now = new Date();
-    const startDate = new Date(startYear, startMonth - 1);
-    const totalMonths =
-      (now.getFullYear() - startDate.getFullYear()) * 12 +
-      now.getMonth() -
-      startDate.getMonth();
+  const calDuration = (start: string, end: string) => {
+    const startDate = new Date(start);
+    const endDate = new Date(end);
 
-    const years = Math.floor(totalMonths / 12);
-    const months = totalMonths % 12;
+    let years = endDate.getFullYear() - startDate.getFullYear();
+    let months = endDate.getMonth() - startDate.getMonth();
 
-    return { years, months };
+    if (months < 0) {
+      years -= 1;
+      months += 12;
+    }
+
+    return `${years} years ${months} months`;
   };
-
-  const { years, months } = calYearsAndMonths(2020, 6);
 
   return (
     <div className="flex flex-col gap-6 my-12">
       <div className="text-20 md:text-24 border-b border-gray-200 pb-2 font-500">
         Work Experience
         <div className="text-16 text-gray-500">
-          ({years} years {months} months)
+          {calDuration("2020-06", "2024-12")}
         </div>
       </div>
 
