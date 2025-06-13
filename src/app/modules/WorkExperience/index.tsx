@@ -34,6 +34,7 @@ const WorkExperience = () => {
               src={entry.company?.logo}
               alt={`${entry.company}-logo`}
               className="w-16 md:w-20 h-16 md:h-20 rounded-full grayscale hover:grayscale-0 cursor-pointer transition-all duration-300"
+              loading="lazy"
             />
           </a>
           <div>

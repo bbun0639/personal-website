@@ -47,10 +47,8 @@ export default function TypingText() {
   }, [displayedText, isDeleting, currentWordIndex, startTyping]);
 
   return (
-    <div className="text-20 md:text-24 md:h-8 h-7">
-      <span className="transition-colors dark:text-green-500 text-orange-500 duration-1000">
-        {displayedText}
-      </span>
-    </div>
+    <span className="transition-colors dark:text-green-500 text-orange-500 duration-1000 text-20 md:text-24">
+      {displayedText}
+    </span>
   );
 }

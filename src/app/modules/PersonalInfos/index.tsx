@@ -1,6 +1,8 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import IconReact from "@/app/assets/icons/react-icon.png";
 import IconNext from "@/app/assets/icons/next-icon.png";
 import IconTs from "@/app/assets/icons/ts-icon.png";
@@ -10,8 +12,10 @@ import IconAndroid from "@/app/assets/icons/android-icon.png";
 import IconGithub from "@/app/assets/logos/github-logo.png";
 import IconGmail from "@/app/assets/logos/gmail-logo.png";
 import ToggleTheme from "../../components/ToggleTheme";
-import MySelfie from "@/app/assets/images/my-selfie-1.png";
-import TypingText from "@/app/components/TypingText";
+import MySelfie from "@/app/assets/images/my-selfie-1.webp";
+const TypingText = dynamic(() => import("@/app/components/TypingText"), {
+  ssr: false,
+});
 
 const PersonalInfos = () => {
   return (
@@ -22,6 +26,7 @@ const PersonalInfos = () => {
             src={IconGithub}
             alt="react-icon"
             className="h-6 w-6 object-contain cursor-pointer dark:bg-white dark:rounded-full p-0.5"
+            priority
           />
         </a>
         <a href="mailto:pathomphob.sun@gmail.com">
@@ -29,6 +34,7 @@ const PersonalInfos = () => {
             src={IconGmail}
             alt="react-icon"
             className="h-6 w-6 object-contain cursor-pointer dark:bg-white dark:rounded-full p-0.5"
+            priority
           />
         </a>
         <ToggleTheme />
@@ -38,12 +44,15 @@ const PersonalInfos = () => {
         src={MySelfie}
         alt="react-icon"
         className="max-h-[160px] max-w-[160px] min-h-[160px] min-w-[160px] md:max-h-[200px] md:max-w-[200px] md:min-h-[200px] md:min-w-[200px] object-cover rounded-full mb-4 transition-all"
+        priority
       />
 
       <h1 className="text-36 md:text-48 font-bold">Pathomphob Sunanta</h1>
 
       <div>
-        <TypingText />
+        <div className="h-7 md:h-[34px]">
+          <TypingText />
+        </div>
 
         <p className="text-16 md:text-18">
           Passionate, learner, responsible, eager to learn new technologies.
@@ -57,16 +66,19 @@ const PersonalInfos = () => {
               src={IconReact}
               alt="react-icon"
               className="h-6 w-6 object-contain"
+              loading="lazy"
             />
             <Image
               src={IconNext}
               alt="next-icon"
               className="h-6 w-6 object-contain"
+              loading="lazy"
             />
             <Image
               src={IconTs}
               alt="ts-icon"
               className="h-6 w-6 object-contain"
+              loading="lazy"
             />
           </div>
           <p className="text-16">
@@ -79,16 +91,19 @@ const PersonalInfos = () => {
               src={IconApple}
               alt="apple-icon"
               className="h-6 w-6 object-contain bg-white rounded-full p-[2px]"
+              loading="lazy"
             />
             <Image
               src={IconAndroid}
               alt="android-icon"
               className="h-6 w-6 object-contain"
+              loading="lazy"
             />
             <Image
               src={IconReactNative}
               alt="react-native-icon"
               className="h-6 w-6 object-contain"
+              loading="lazy"
             />
           </div>
           <p className="text-16">

@@ -20,6 +20,7 @@ const TechStack = () => {
                     src={detail.logo}
                     alt={`${detail.name}-logo`}
                     className="w-12 h-12 object-contain p-3"
+                    loading="lazy"
                   />
                   <div className="bg-white w-10 h-10 rounded-full absolute -z-10 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"></div>
                 </div>
