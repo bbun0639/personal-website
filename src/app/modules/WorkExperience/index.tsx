@@ -39,7 +39,7 @@ const WorkExperience = () => {
           <div>
             <p className="font-500 text-18 md:text-20">{entry.position}</p>
             <p className="text-16 md:text-18">{entry.company.name}</p>
-            <p className="text-14 md:text-16 text-gray-500">{entry.duration}</p>
+            <p className="text-14 text-gray-500">{entry.duration}</p>
           </div>
         </div>
       ))}

@@ -11,6 +11,7 @@ import IconGithub from "@/app/assets/logos/github-logo.png";
 import IconGmail from "@/app/assets/logos/gmail-logo.png";
 import ToggleTheme from "../../components/ToggleTheme";
 import MySelfie from "@/app/assets/images/my-selfie-1.png";
+import TypingText from "@/app/components/TypingText";
 
 const PersonalInfos = () => {
   return (
@@ -42,9 +43,8 @@ const PersonalInfos = () => {
       <h1 className="text-36 md:text-48 font-bold">Pathomphob Sunanta</h1>
 
       <div>
-        <p className="text-20 md:text-24 transition-colors dark:text-green-500 text-orange-500 duration-1000">
-          Frontend Developer
-        </p>
+        <TypingText />
+
         <p className="text-16 md:text-18">
           Passionate, learner, responsible, eager to learn new technologies.
         </p>
